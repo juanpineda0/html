@@ -4,12 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form action="">
-        <label for="nombre">
-            <input type="text" id="nombre"> 
+   <!-- <form action="">
+        <label for="fecha-nacimiento">
+            <span>fecha de nacimiento</span>
+            <input type="date" id="fecha-nacimiento"> 
         </label>
+        <label for="horario">
+            <span>horario</span>
+            <input type="time" id="horario"> 
+        </label>
+        <label for="dia">
+            <span>Día</span>
+            <input type="date" id="dia" name="dia">
+        </label>
+        <label for="semana">
+            <span>Semana</span>
+            <input type="week" id="semana" name="semana">
+        </label>
+        <label for="mes">
+            <span>Mes</span>
+            <input type="month" id="mes" name="mes">
+        </label>
+        <input type="submit">
+    </form>-->  
+    <form action="">
+        <label for="calendario">
+            <span>Calendario</span>
+            <input type="datetime-local" id="calendario" name="calendario" required>
+        </label>
+        <label for="nombre">
+            <span>¿Cuál es tu nombre?</span>
+            <input type="text" id="nombre" placeholder="Tu nombre" name="nombre" required> 
+        </label>
+        <label for="pais">
+            <span>¿En qué país vives?</span>
+            <input type="text" id="pais" name="pais" placeholder="pais" autocomplete="country"> 
+        </label>
+        <label for="email">
+            <span>¿Cuál es tu correo?</span>
+            <input type="email" id="email" name="email" placeholder="email@example.com" autocomplete="email" required> 
+        </label>
+        <label for="carrera">
+            <span>carrera</span>
+            <!--<select name="carrera" id="carrera" required>
+                <option value="">Selecciona</option>
+                <option value="ing_civil">Ingeniería civil</option>
+                <option value="ing_mecatr">Ingeniería mecatrónica</option>
+                <option value="ing_mecanica">Ingeniería mecánica</option>
+                <option value="ing_biomedica">Ingeniería biomédica</option>
+                <option value="ing_industrial">Ingeniería industial</option>
+            </select> -->
+            <input list="cursos">
+            <datalist id="cursos">
+                <option value="Ingenieria civil">Ingeniería civil</option>
+                <option value="Ingenieria mecatrónica">Ingeniería mecatrónica</option>
+                <option value="Ingenieria mecanica">Ingeniería mecánica</option>
+                <option value="Ingenieria biomedica">Ingeniería biomédica</option>
+                <option value="Ingenieria industial">Ingeniería industial</option>
+            </datalist>
+        </label>
+        <button type="submit">Enviar</button><!----->
+        <input type="submit" value="nombre"><!---->
     </form>
 </body>
 </html>
